@@ -5,14 +5,14 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Demon extends Creature
+public class Balrog extends Creature
 {
-    private int maxStr = 25;
-    private int minStr = 8;
-    private int maxHp = 40;
-    private int minHp = 15;
+    private int maxStr = 100;
+    private int minStr = 50;
+    private int maxHp = 200;
+    private int minHp = 80;
     private Random rand;
-    public Demon(int strength, int hp){
+    public Balrog(int strength, int hp){
         super(hp, strength);
         Random rand = new Random();
     }

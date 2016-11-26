@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=strength\ hp
 comment0.target=Human(int,\ int)
-comment1.params=
-comment1.target=int\ setStrength()
-comment2.params=
-comment2.target=int\ setHp()
+comment1.params=strength
+comment1.target=int\ setStrength(int)
+comment2.params=hp
+comment2.target=int\ setHp(int)
 numComments=3

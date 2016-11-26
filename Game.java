@@ -10,10 +10,8 @@ public class Game
 {
     private ArrayList<Creature> armyOne;
     private ArrayList<Creature> armyTwo;
-    private int humanStr;
-    private int humanHp;
-    private int elfStr;
-    private int elfHp;
+    private int strength;
+    private int hp;
     private Random rand;
     /**
      * Constructor for objects of class Game
@@ -22,21 +20,20 @@ public class Game
     {
         armyOne = new ArrayList<Creature>();
         armyTwo = new ArrayList<Creature>();
-        Random rand = new Random();
+        rand = new Random();
     }
     
     public void populate() {
         for(int i = 0; i < 100; i++) {
-            do {
-                humanStr = rand.nextInt(18)-5;
-            }while(humanStr==0);
-            
-            do {
-                humanHp = rand.nextInt(30)-10;
-            }while(humanHp==0);
-            
-            armyOne.add(new Human(humanStr, humanHp));
-            
+            strength = rand.nextInt(18 - 5 + 1) + 5;
+            hp = rand.nextInt(30 - 10 + 1) + 10;
+            armyOne.add(new Human(strength, hp));
+        }
+        
+        for(int i = 0; i < 100; i++) {
+            strength = rand.nextInt(18 - 5 + 1) + 5;
+            hp = rand.nextInt(25 - 9 + 1) + 9;
+            armyTwo.add(new Elf(strength, hp));
         }
     }
 }
