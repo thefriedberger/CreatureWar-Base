@@ -12,8 +12,7 @@ public class Demon extends Creature
     private int maxHp = 40;
     private int minHp = 15;
     private Random rand;
-    public Demon(int strength, int hp){
-        super(hp, strength);
+    public Demon(){
         Random rand = new Random();
     }
     

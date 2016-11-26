@@ -13,6 +13,7 @@ public class Game
     private int strength;
     private int hp;
     private Random rand;
+    private Human h;
     /**
      * Constructor for objects of class Game
      */
@@ -21,19 +22,16 @@ public class Game
         armyOne = new ArrayList<Creature>();
         armyTwo = new ArrayList<Creature>();
         rand = new Random();
+        h = new Human();
     }
     
     public void populate() {
         for(int i = 0; i < 100; i++) {
-            strength = rand.nextInt(18 - 5 + 1) + 5;
-            hp = rand.nextInt(30 - 10 + 1) + 10;
-            armyOne.add(new Human(strength, hp));
+            armyOne.add(h);
         }
         
         for(int i = 0; i < 100; i++) {
-            strength = rand.nextInt(18 - 5 + 1) + 5;
-            hp = rand.nextInt(25 - 9 + 1) + 9;
-            armyTwo.add(new Elf(strength, hp));
+            armyTwo.add(h);
         }
     }
 }

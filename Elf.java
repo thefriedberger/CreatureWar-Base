@@ -12,8 +12,7 @@ public class Elf extends Creature
     private int maxHp = 25;
     private int minHp = 9;
     private Random rand;
-    public Elf(int strength, int hp){
-        super(hp, strength);
+    public Elf(){
         Random rand = new Random();
     }
     

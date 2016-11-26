@@ -12,8 +12,7 @@ public class CyberDemon extends Creature
     private int maxHp = 100;
     private int minHp = 25;
     private Random rand;
-    public CyberDemon(int strength, int hp){
-        super(hp, strength);
+    public CyberDemon(){
         Random rand = new Random();
     }
     

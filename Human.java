@@ -12,17 +12,18 @@ public class Human extends Creature
     private int maxHp = 30;
     private int minHp = 10;
     private Random rand;
-    public Human(int strength, int hp){
-        super(hp, strength);
+    public Human(){
         Random rand = new Random();
     }
     
-    public int setStrength(int strength) {
+    public int setStrength() {
+        super.setStrength();
         strength = rand.nextInt(maxStr - minStr + 1) + minStr;
         return strength;
     }
     
-    public int setHp(int hp) {
+    public int setHp() {
+        super.setHp();
         hp = rand.nextInt(maxHp - minHp + 1) + minHp;
         return hp;
     }

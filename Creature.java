@@ -7,21 +7,37 @@ import java.util.Random;
  */
 public class Creature
 {
-   private int hp = 10;
-   private int strength = 10;
+   public int hp;
+   public int strength;
    private int damage;
-   
-   public Creature(int hp, int strength){
+   private int humanHp;
+   private int humanStr;
+   private int maxStr;
+   private int minStr;
+   private int maxHp;
+   private int minHp;
+   private Random rand;
+   public Creature(){
        this.hp = hp;
        this.strength = strength;
        damage = damage;
+       rand = new Random();
+   }
+   
+   public int setStrength() {
+       strength = rand.nextInt(maxStr - minStr + 1) + minStr;
+       return strength;
+   }
+   
+   public int setHp() {
+       hp = rand.nextInt(maxHp - minHp + 1) + minHp;
+       return hp;
    }
     
    /**
     * calculates the damage dealt by any creature
     */
    public int setDamage(){
-       Random rand = new Random();
        damage = rand.nextInt(strength)+1;
        return damage;
    }
@@ -35,5 +51,5 @@ public class Creature
            state = true;
        }
        return state;
-    }
+   }
 }
