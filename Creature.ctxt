@@ -1,6 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Creature()
+comment0.params=hp\ strength
+comment0.target=Creature(int,\ int)
 comment1.params=
-comment1.target=int\ damage()
-numComments=2
+comment1.target=int\ setDamage()
+comment1.text=\r\n\ calculates\ the\ damage\ dealt\ by\ any\ creature\r\n
+comment2.params=
+comment2.target=boolean\ isAlive()
+comment2.text=\r\n\ checks\ if\ creature\ is\ alive,\ as\ long\ as\ hp\ is\ over\ 0\r\n
+numComments=3
