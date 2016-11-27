@@ -16,15 +16,13 @@ public class Human extends Creature
         Random rand = new Random();
     }
     
-    public int setStrength() {
+    public void setStrength() {
         super.setStrength();
         strength = rand.nextInt(maxStr - minStr + 1) + minStr;
-        return strength;
     }
     
-    public int setHp() {
+    public void setHp() {
         super.setHp();
         hp = rand.nextInt(maxHp - minHp + 1) + minHp;
-        return hp;
     }
 }

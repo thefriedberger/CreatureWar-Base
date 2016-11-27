@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Demon()
+comment0.params=hp\ strength
+comment0.target=Demon(int,\ int)
 comment1.params=strength
 comment1.target=int\ setStrength(int)
 comment2.params=hp

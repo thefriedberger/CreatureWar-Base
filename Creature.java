@@ -10,8 +10,8 @@ public class Creature
    public int hp;
    public int strength;
    private int damage;
-   private int humanHp;
-   private int humanStr;
+   public int humanHp;
+   public int humanStr;
    private int maxStr;
    private int minStr;
    private int maxHp;
@@ -24,15 +24,13 @@ public class Creature
        rand = new Random();
    }
    
-   public int setStrength() {
+   public void setStrength() {
        strength = rand.nextInt(maxStr - minStr + 1) + minStr;
-       return strength;
    }
    
-   public int setHp() {
+   public void setHp() {
        hp = rand.nextInt(maxHp - minHp + 1) + minHp;
-       return hp;
-   }
+    }
     
    /**
     * calculates the damage dealt by any creature

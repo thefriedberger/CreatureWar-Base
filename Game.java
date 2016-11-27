@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Iterator;
 /**
  * Write a description of class Game here.
  * 
@@ -13,7 +14,6 @@ public class Game
     private int strength;
     private int hp;
     private Random rand;
-    private Human h;
     /**
      * Constructor for objects of class Game
      */
@@ -22,16 +22,29 @@ public class Game
         armyOne = new ArrayList<Creature>();
         armyTwo = new ArrayList<Creature>();
         rand = new Random();
-        h = new Human();
     }
     
     public void populate() {
         for(int i = 0; i < 100; i++) {
-            armyOne.add(h);
+            hp = rand.nextInt(30 - 10 + 1) + 10;
+            strength = rand.nextInt(18 - 5 + 1) + 5;
+            armyOne.add(new Human());
         }
         
         for(int i = 0; i < 100; i++) {
-            armyTwo.add(h);
+            armyTwo.add(new Elf());
+        }
+    }
+    
+    public void war() {
+        Iterator it = armyOne.iterator();
+        Iterator itr = armyTwo.iterator();
+        for (int i = 0; i < 100; i++){
+            while (it.hasNext()){
+                while(armyOne == isAlive() && armyTwo == isAlive()){
+                    
+                }                
+            }
         }
     }
 }

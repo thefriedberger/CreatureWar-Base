@@ -12,7 +12,8 @@ public class Balrog extends Creature
     private int maxHp = 200;
     private int minHp = 80;
     private Random rand;
-    public Balrog(){
+    public Balrog(int hp, int strength){
+        super(hp, strength);
         Random rand = new Random();
     }
     
